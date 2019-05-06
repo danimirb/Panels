@@ -46,8 +46,9 @@ public class Panels {
                                                          visible: config.visibleArea(),
                                                          size: config.size(for: container))
 
-        panel.hideKeyboardAutomatically()
-        if configuration.shouldListenKeyboard == true  {
+        
+        if config.shouldListenKeyboard == true  {
+            panel.hideKeyboardAutomatically()
             registerKeyboardNotifications()
         }
         //Prepare the view placement, saving the safeArea.
