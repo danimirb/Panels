@@ -47,6 +47,9 @@ public struct PanelConfiguration {
 
     // Animation duration when the panel is dimissed
     public var dismissAnimationDuration: Double = 0.3
+    
+    /// Should listen keyboar notifications
+    public var shouldListenKeyboard: Bool = true
 
     public init(size: PanelDimensions = .thirdQuarter,
                 margin: CGFloat = 8.0,

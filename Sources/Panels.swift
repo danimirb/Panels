@@ -47,7 +47,9 @@ public class Panels {
                                                          size: config.size(for: container))
 
         panel.hideKeyboardAutomatically()
-        registerKeyboardNotifications()
+        if configuration.shouldListenKeyboard == true  {
+            registerKeyboardNotifications()
+        }
         //Prepare the view placement, saving the safeArea.
         panelHeight = config.heightConstant ?? panel.headerHeight.constant
         panel.headerHeight.constant = panelHeight + UIApplication.safeAreaTop()
